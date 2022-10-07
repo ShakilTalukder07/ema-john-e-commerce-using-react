@@ -6,12 +6,19 @@ export const ProductsAndCardLoaders = async () => {
     const products = await productsData.json();
 
     // get cart 
-    const savedCart = getStoredCart()
-    // console.log('savedCart', savedCart)
+    const savedCart = getStoredCart();
+    const initialCart = [];
+
+    // console.log(products);
 
     for (const id in savedCart) {
-        console.log(id)
+        const addedProducts = products.find(product => product.id === id);
+        if (addedProducts) {
+            const quantity = savedCart[id];
+            addedProducts.quantity = quantity;
+            initialCart.push(addedProducts);
+        }
     }
-    
-    return products;
+
+    return {products, initialCart};
 }
