@@ -18,8 +18,7 @@ const Header = () => {
                 <Link to="/About">About</Link>
                 {
                     user?.uid ?
-                        <button onClick={logOut}>Sign Out</button>
-                        // <Link to='/Login'>Login</Link>
+                        <button className='btn-logout' onClick={logOut}>Sign Out</button>
                         :
                         <>
                             <Link to='/Login'>Login</Link>

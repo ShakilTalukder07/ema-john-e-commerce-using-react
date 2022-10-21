@@ -24,7 +24,7 @@ const Cart = (props) => {
             <p>Total Shipping:${shipping} </p>
             <p>Tax:${tax} </p>
             <h4>Grand Total:${grandTotal} </h4>
-            <button onClick={clearCart}>clearCart</button>
+            {/* <button onClick={clearCart}>clearCart</button> */}
             {children}
         </div>
     );
