@@ -2,7 +2,7 @@
 ------------------
 AUTH SETUP STEPS
 ------------------
-1. create firebase projecct
+1. create firebase project
 2. enable web
 3. enable sign in method
 4. install firebase
@@ -15,5 +15,7 @@ AUTH SETUP STEPS
 2. Create AuthContext
 3. set AuthContext.Provider 
 4.Make sure to set the children
-5. 
+5. export auth context
+6. get form data
+7. getAuth in the userContext
 */
